@@ -5,6 +5,9 @@
 #
 FROM eclipse-temurin:17-jdk-jammy AS build
 
+ENV JAVA_HOME /usr/lib/jvm/java
+ENV PATH $JAVA_HOME/bin:$PATH
+
 WORKDIR /app
 
 COPY .mvn/ .mvn
