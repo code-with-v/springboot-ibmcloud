@@ -3,10 +3,7 @@
 #
 # Build image
 #
-FROM eclipse-temurin:17-jdk-jammy AS build
-
-ENV JAVA_HOME /usr/lib/jvm/java
-ENV PATH $JAVA_HOME/bin:$PATH
+FROM openjdk:17-jdk-slim AS build
 
 WORKDIR /app
 
